@@ -13,8 +13,8 @@ help:
 	@echo 'Usage: make $$JOB_TITLE'
 	@echo ' Will produce "$$JOB_TITLE - $(AUTHOR).pdf" file'
 
-%: main.tex
-	@$(MAKE) -f $(THIS_FILE) JOBNAME='$@' '$@ - $(AUTHOR).pdf'
+%:
+	@$(MAKE) -f $(THIS_FILE) JOBNAME='$@' '$(AUTHOR) - $@.pdf'
 
 %.pdf: main.tex
 	lualatex --jobname='$(JOBNAME)' $<
