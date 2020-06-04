@@ -24,7 +24,7 @@
 \documentclass[11pt]{developercv} % Default font size, values from 8-12pt are recommended
 \usepackage{xstring}
 
-\StrSubstitute{\jobname}{"}{}[\Title]
+\StrSubstitute{\jobname}{^^^^0022}{}[\Title] % ^^^^0022 is a double quote to avoid linter warning
 
 \title{\Title}
 
@@ -121,18 +121,15 @@
 \cvsect{Education}
 
 \begin{entrylist}
-  \entry
-    {2010 --- 2013}
+  \entry{2010 --- 2013}
     {PhD of geography study, not finished}
-    {Hydrometeorological Research Centre of Russian Federation, Moscow}
+    {Hydrometcenter of Russia, Moscow}
     {Meteorology, climatology and agrometeorology}
-  \entry
-    {2007 --- 2010}
+  \entry{2007 --- 2010}
     {Specialist's degree}
     {National Research University ``MPEI'', Moscow}
     {Machines and technology of highly effective processes of materials processing}
-  \entry
-    {2003 --- 2007}
+  \entry{2003 --- 2007}
     {Bachelor's Degree}
     {National Research University ``MPEI'', Moscow}
     {Technological machines and equipment}
@@ -149,7 +146,7 @@
   \entry{2017 --- now}
     {System Administrator}
     {InnoGames GmbH}
-    {
+    {\
       First experience in an international company\\
       My first big task was to get an old project into maintainable state\\
       During the project I've implemented automated servers deployment and CI/CD for software\\
@@ -159,7 +156,7 @@
   \entry{2013 --- 2017}
     {Linux System Administrator (promoted from junior)}
     {Yandex LLC / Yandex.Market Lab LLC}
-    {
+    {\
       Launching of new projects (full pipeline)\\
       Automation of toil (bash, python, perl scritping)\\
       Deploying hosts to production-ready from scratch\\
@@ -168,11 +165,10 @@
       DBs (ClickHouse, MySQL, mongoDB)\\
       \texttt{Automation}\slashsep\texttt{Python}\slashsep\texttt{HA systems administration}\slashsep\texttt{Linux}
     }
-  \entry
-    {2009 --- 2013}
+  \entry{2009 --- 2013}
     {Junior scientist (promoted from engineer)}
     {Hydrometeorological Research Centre of Russian Federation}
-    {
+    {\
       Deployed and maintained local Linux hosts\\
       Wrote scripts (bash, awk, perl)\\
       Visualized meteorological data\\
@@ -203,10 +199,10 @@
   \vspace{-\baselineskip} % Required for vertically aligning minipages
 
   \cvsect{Languages}
-  
-  \textbf{Russian} - native\\
-  \textbf{English} - proficient\\
-  \textbf{German} - rudimentary
+
+  \textbf{Russian} --- native\\
+  \textbf{English} --- proficient\\
+  \textbf{German} --- rudimentary
 \end{minipage}
 \hfill
 
