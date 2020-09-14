@@ -23,14 +23,15 @@
 
 \documentclass[11pt]{developercv} % Default font size, values from 8-12pt are recommended
 \usepackage{xstring}
+\usepackage{graphicx}
 
 \StrSubstitute{\jobname}{^^^^0022}{}[\Title] % ^^^^0022 is a double quote to avoid linter warning
 
 \title{\Title}
 
 
-\hypersetup{pdftitle=Mikhail f. Shiryaev -- \Title,  % chktex 8
-  pdfauthor=Mikhail f. Shiryaev,
+\hypersetup{pdftitle=Alexandra Shiryaeva -- \Title,  % chktex 8
+  pdfauthor=Alexandra Shiryaeva,
   colorlinks=true,
   linkcolor=blue,
   urlcolor=darkgray,
@@ -44,75 +45,31 @@
 %  TITLE AND CONTACT INFORMATION
 %----------------------------------------------------------------------------------------
 
-\begin{minipage}[t]{0.42\textwidth} % 45% of the page width for name
+\begin{minipage}[t]{0.39\textwidth} % 45% of the page width for name
   \vspace{-\baselineskip} % Required for vertically aligning minipages
-  \colorbox{black}{{\HUGE\textcolor{white}{\textbf{\MakeUppercase{Mikhail}}}}} % First name
+  \colorbox{black}{{\HUGE\textcolor{white}{\textbf{\MakeUppercase{Alexandra}}}}} % First name
 
-  \colorbox{black}{{\HUGE\textcolor{white}{\textbf{\MakeUppercase{Shiryaev}}}}} % Last name
+  \colorbox{black}{{\HUGE\textcolor{white}{\textbf{\MakeUppercase{Shiryaeva}}}}} % Last name
+  \colorbox{black}{{\large\textcolor{white}{\textbf{(name at birth Borzenkova)}}}} % Last name
 
   \hyphenpenalty=10000
   \raggedright{}
-  {\huge \Title} % Career or current job title
+  %{\huge \Title} % Career or current job title
 \end{minipage}
-\begin{minipage}[t]{0.38\textwidth} % 27.5% of the page width for the first row of icons
+\begin{minipage}[t]{0.45\textwidth} % 27.5% of the page width for the first row of icons
   \vspace{-\baselineskip} % Required for vertically aligning minipages
-  % The first parameter is the FontAwesome icon name, the second is the box size and the third is the text
-  % Other icons can be found by referring to https://ctan.net/fonts/fontawesome/doc/fontawesome.pdf and using the word after \fa in the command for the icon you want
   \icon{MapMarker}{18}{Hamburg DE}\\
-  \icon{Phone}{18}{+49 1516 3041246}\\
-  \icon{At}{18}{\href{mailto:mikhail.f.shiryaev@gmail.com}{mikhail.f.shiryaev@gmail.com}}\\
+  \icon{Phone}{18}{+49 177 6460919}\\
+  \icon{At}{18}{\href{mailto:alexandra.v.shiryaeva@gmail.com}{alexandra.v.shiryaeva@gmail.com}}\\
 \end{minipage}
-\begin{minipage}[t]{0.28\textwidth} % 27.5% of the page width for the second row of icons
+\begin{minipage}[t]{0.35\textwidth} % 27.5% of the page width for the second row of icons
   \vspace{-\baselineskip} % Required for vertically aligning minipages
   % The first parameter is the FontAwesome icon name, the second is the box size and the third is the text
   % Other icons can be found by referring to https://ctan.net/fonts/fontawesome/doc/fontawesome.pdf and using the word after \fa in the command for the icon you want
-  \icon{Github}{18}{\href{https://github.com/Felixoid}{github.com/Felixoid}}\\
-  \icon{LinkedinSquare}{18}{\href{https://www.linkedin.com/in/felixoid/}{felixoid}}\\
-  \icon{Linux}{18}{\href{https://aur.archlinux.org/packages/?K=Felixoid&SeB=M}{AUR/Felixoid}}\\
+  \includegraphics[scale=0.13]{Photo.png}
 \end{minipage}
 
-\vspace{1.5cm}
-
-%----------------------------------------------------------------------------------------
-%  INTRODUCTION, SKILLS AND TECHNOLOGIES
-%----------------------------------------------------------------------------------------
-
-\cvsect{Who Am I?}
-
-\begin{minipage}[t]{0.48\textwidth} % 40% of the page width for the introduction text
-  \parindent=2mm
-  Over the past 10+ years at Hydrometeorological Centre of Russia, Yandex LLC and then at InnoGames GmbH I have dealt with many aspects of system administration.
-
-  I've been a part of the most professional teams of System Administrators. I have learned the best practices of high availability systems managing, continuous integration and continuous delivery tools and systems in Yandex. I've used and improved acquired skills during my work in InnoGames for building reliable infrastructure.
-
-  My goals are to use and improve my skills of Linux and infrastructure system administration while solving challenging problems in a growing or a large international company.
-\end{minipage}
-\hfill % Whitespace between
-\begin{minipage}[t]{0.5\textwidth} % 50% of the page for the skills bar chart
-  \vspace{-\baselineskip} % Required for vertically aligning minipages
-  \small
-  \begin{barchart}{5}
-    \baritem{Linux administration}{100}
-    \baritem{HA systems operation}{100}
-    \baritem{Puppet}              {90}
-    \baritem{ClickHouse DBMS}     {82}
-    \baritem{Python}              {81}
-    \baritem{Graphite+ClickHouse} {79}
-    \baritem{Automatization}      {77}
-    \baritem{Docker}              {76}
-    \baritem{Golang}              {75}
-    \baritem{Bash}                {74}
-    \baritem{Nginx}               {70}
-    \baritem{Jenkins}             {67}
-    \baritem{SaltStack}           {50}
-  \end{barchart}
-\end{minipage}
-
-\begin{center}
-  \bubbles{5/OSS, 0/, 4/Architecture, 0/, 5/Learning new, 0/, 6/Get things working}
-\end{center}
-
-\vspace{1.5cm}
+\vspace{0.5cm}
 
 %----------------------------------------------------------------------------------------
 %  EDUCATION
@@ -120,17 +77,21 @@
 
 \cvsect{Education}
 
+{\large{Lomonosov Moscow State University,\\
+Faculty of Geography,\\
+Department of meteorology and climatology}}
+\\\\
+
 \begin{entrylist}
-  \entry{2007 --- 2010}
-    {Specialist's degree}
-    {National Research University ``MPEI'', Moscow}
-    {Machines and technology of highly effective processes of materials processing}
+  \entry{2007 --- 2009}
+  {Master's Degree,}
+    {}
+    {Thesis: ``Changes of cold season applied climatological characteristics in Russia in 1950--2006''}
   \entry{2003 --- 2007}
     {Bachelor's Degree}
-    {National Research University ``MPEI'', Moscow}
-    {Technological machines and equipment}
+    {}
+    {\hyphenpenalty=10000 Thesis: ``Change of the intensity of snowfalls and its impact on expenses of cleaning main roads in Russian towns''}
 \end{entrylist}
-\pagebreak
 
 %----------------------------------------------------------------------------------------
 %  EXPERIENCE
@@ -139,72 +100,33 @@
 \cvsect{Experience}
 
 \begin{entrylist}
-  \entry{2017 --- 2021}
-    {System Administrator}
-    {InnoGames GmbH}
+  \entry{2010 --- now*}
+    {Junior researcher}
+    {}
     {\
-      First experience in an international company\\
-      My first big task was to get an old project into maintainable state\\
-      During the project I've implemented automated servers deployment and CI/CD for software\\
-      During 2019 I've contributed a lot in open source software related to graphite-web\\
-      During 2020 I've focused on golang projects and significantly improved go+graphite-web+ClickHouse eco-system\\
-      \texttt{Jenkins}\slashsep\texttt{Docker}\slashsep\texttt{ClickHouse}\slashsep\texttt{Graphite}\slashsep\texttt{OSS}
+      Institute of Geography Russian Academy of Sciences, laboratory of climatology\\
+      {\footnotesize* October 2017 moving to Germany, maternity leave with two children (were born in 2015 and 2019), part-time remote work in Institute of Geography RAS}
     }
-  \entry{2013 --- 2017}
-    {Linux System Administrator\\(promoted from junior)}
-    {Yandex LLC / Yandex.Market Lab LLC}
-    {\
-      Launching of new projects (full pipeline)\\
-      Automation of toil (bash, python, perl scripting)\\
-      Deploying hosts to production-ready from scratch\\
-      Managing of HA systems (market.yandex.ru)\\
-      Software and hardware monitoring management\\
-      DBs (ClickHouse, MySQL, MongoDB)\\
-      \texttt{Automation}\slashsep\texttt{Python}\slashsep\texttt{HA systems administration}\slashsep\texttt{Linux}
-    }
-  \entry{2009 --- 2013}
-    {Junior scientist\\(promoted from engineer)}
-    {Hydrometeorological Centre of Russia}
-    {\
-      Deployed and maintained local Linux hosts\\
-      Wrote scripts (bash, awk, perl)\\
-      Visualized meteorological data\\
-      Mined and processed data\\
-      Finished a PhD of geography, all but thesis\\
-      \texttt{Linux}\slashsep\texttt{GNU}\slashsep\texttt{Science}
-    }
+  \entry{2009 --- 2015}
+    {Lead expert}
+    {}
+    {\hyphenpenalty=10000 Aviamettelekom of Roshydromet (The Russian Federal Service for Hydrometeorology and Environmental Monitoring), department of marketing and development}
 \end{entrylist}
 
 %----------------------------------------------------------------------------------------
 %  ADDITIONAL INFORMATION
 %----------------------------------------------------------------------------------------
 
-\vspace{1.5cm}
-\hfill
-\begin{minipage}[t]{0.3\textwidth}
-  \vspace{-\baselineskip} % Required for vertically aligning minipages
-
-  \cvsect{Hobbies}
-
-  Family\\
-  Friends\\
-  Self-training\\
-  OSS contribution\\
-  Engineering\\
-  Traveling\\
-  Sport\\
-\end{minipage}
-\hfill
-\begin{minipage}[t]{0.3\textwidth}
-  \vspace{-\baselineskip} % Required for vertically aligning minipages
-
-  \cvsect{Languages}
-
-  \textbf{Russian} --- native\\
-  \textbf{English} --- proficient\\
-  \textbf{German} --- basics\\
-\end{minipage}
-\hfill
+%\vspace{1.5cm}
+\cvsect{Computer skills}\\
+  Platforms: Windows, Linux\\
+  Languages: SQL, Python\\
+  Applications: MS Office and LibreOffice, Surfer, QGIS, ArcGIS\\\\
+\cvsect{Additional information}
+Participation in 13 international conferences, 7 field expeditions\\
+12 articles in peer-reviewed journals\\
+Languages: Russian --- native; English --- B1--B2; German --- A2-B1\\
+Eligible to work in Germany (residence permit)
 
 %----------------------------------------------------------------------------------------
 
