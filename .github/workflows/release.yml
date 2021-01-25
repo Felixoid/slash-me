@@ -1,0 +1,56 @@
+name: Upload Packages to new release
+
+on:
+  release:
+    types:
+      - published
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    container:
+      image: ghcr.io/xu-cheng/texlive-full:latest
+
+    outputs:
+      matrix: ${{ steps.build.outputs.matrix }}
+    steps:
+    - uses: actions/checkout@v2
+      name: Checkout
+    - name: Build packages
+      id: build
+      run: |
+        apk add make
+        make 'DevOps Engineer' 'Site Reliability Engineer' 'SRE' 'System Administrator'
+        ( printf '::set-output name=matrix::{"file": ['
+        for file in *pdf; do printf "\"$file\","; done
+        echo ]} ) | sed 's/,\]/]/'
+    - name: Artifact
+      id: artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: packages
+        retention-days: 1
+        path: |
+          *.pdf
+
+  upload:
+    needs: build
+    runs-on: ubuntu-latest
+    strategy:
+      matrix: ${{fromJson(needs.build.outputs.matrix)}}
+    steps:
+    - name: Download artifact
+      uses: actions/download-artifact@v2
+      with:
+        name: packages
+    - name: Upload ${{ matrix.file }}
+      id: upload
+      uses: actions/upload-release-asset@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        upload_url: ${{ github.event.release.upload_url }}
+        asset_path: ${{ matrix.file }}
+        asset_name: ${{ matrix.file }}
+        asset_content_type: application/octet-stream
