@@ -1,7 +1,7 @@
 THIS_FILE = $(lastword $(MAKEFILE_LIST))
 AUTHOR = Mikhail f. Shiryaev
 
-.PHONY: help clean
+.PHONY: help clean dvi
 
 clean-all: clean
 	@rm -f *pdf
@@ -12,6 +12,9 @@ clean:
 help:
 	@echo 'Usage: make $$JOB_TITLE'
 	@echo ' Will produce "$$JOB_TITLE - $(AUTHOR).pdf" file'
+
+# By some reason, vim autocommand executes `make "dvi"`
+dvi:
 
 %:
 	@$(MAKE) -f $(THIS_FILE) JOBNAME='$@' '$(AUTHOR) - $@.pdf'
