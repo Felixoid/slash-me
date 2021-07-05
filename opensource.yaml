@@ -1,5 +1,23 @@
+2006:
+- The first IT job was ADSL technician
+
+2007-2009:
+- The part-time technician in different companies
+
+2009-2012:
+- An engineer position at RHMC:
+  - Data visualisation
+  - Basics of scripring and programming
+  - Started PhD
+
+2013:
+- Learned PERL
+- Started a carier at Yandex Market:
+  - The best bootstrap I can imagine for system administration
+  - Applied the PERL knowledge to implement bot to support on-call duties
+
 2017:
-- 'My first significant cotribution to opensource project: pv6 support in etcd': https://github.com/etcd-io/etcd/pull/7256
+- 'My first significant cotribution to opensource project: ipv6 support in etcd': https://github.com/etcd-io/etcd/pull/7256
 - Changed my living country and a company. Started to work in English
 - 'Started the project to clean up "Augean stables"':
   - The project was completely set up manually
@@ -11,7 +29,7 @@
   - I put all hosts to puppet, after that they were able to build automagically
   - I developed the jenkins shared library for pipelines https://github.com/innogames/jenkins-lib
   - After long discussion with devs, I found a strategy to build packages from HEAD or tags
-  - The first projects did cost me ~7 months of discussions and development (PHP, Java), and then the rest ~10 in 5 months
+  - The first couple of projects did cost me ~7 months of discussions and development (PHP, Java), and then the rest ~10 in 5 months
 - I developed ClickHouse puppet module to configure the server and client, including the users management https://github.com/innogames/puppet-clickhouse
 
 2019:
