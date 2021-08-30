@@ -1,0 +1,58 @@
+2006:
+- The first IT job was ADSL technician
+
+2007-2009:
+- The part-time technician in different companies
+
+2009-2012:
+- An engineer position at RHMC:
+  - Data visualisation
+  - Basics of scripring and programming
+  - Started PhD
+
+2013:
+- Learned PERL
+- Started a carier at Yandex Market:
+  - The best bootstrap I can imagine for system administration
+  - Applied the PERL knowledge to implement bot to support on-call duties
+
+2017:
+- 'My first significant cotribution to opensource project: ipv6 support in etcd': https://github.com/etcd-io/etcd/pull/7256
+- Changed my living country and a company. Started to work in English
+- 'Started the project to clean up "Augean stables"':
+  - The project was completely set up manually
+  - Configs on different hosts were even different
+  - The whole code were deployed with custom script, built directly on web-hosts
+
+2018:
+- Outcome from it:
+  - I put all hosts to puppet, after that they were able to build automagically
+  - I developed the jenkins shared library for pipelines https://github.com/innogames/jenkins-lib
+  - After long discussion with devs, I found a strategy to build packages from HEAD or tags
+  - The first couple of projects did cost me ~7 months of discussions and development (PHP, Java), and then the rest ~10 in 5 months
+- I developed ClickHouse puppet module to configure the server and client, including the users management https://github.com/innogames/puppet-clickhouse
+
+2019:
+- I've started the project of graphite-web metrics system refactoring:
+  - As pre-requisite, I've done two big PRs to ClickHouse system, that implemented:
+    - storage scheme compatibility with whisper retention and aggregation https://github.com/ClickHouse/ClickHouse/pull/4426
+    - dynamic system table with actual scheme belonging to graphite data tables https://github.com/ClickHouse/ClickHouse/pull/4584
+  - The next step was implementing a support of the previous feature in java server Graphouse to collect and request metrics from ClickHouse https://github.com/ClickHouse/graphouse/pull/110
+  - As well as adding there compatibility with newer graphite-web versions, in python https://github.com/ClickHouse/graphouse/pull/129
+  - When it became obvious, that project Graphouse is not under active maintenance, I switched to graphite-clickhouse + carbon-clickhouse golang implementation
+  - Then another issue popped up, and I created the project graphite-ch-optimizer https://github.com/innogames/graphite-ch-optimizer
+
+2020:
+- To dump the historical data from old storage whisper to the new ClickHouse, I've implemented a few improvements into whisper-to-graphite project https://github.com/bzed/whisper-to-graphite/pulls?q=is%3Apr+is%3Aclosed+author%3Afelixoid
+- When the first part of migration was done, and I've switched the load to the new storage, the new task of migrating to a new engine appeared:
+  - I've done a dozen of PRs into carbonapi, that added unimplemented graphite-web features and fixed some bugs https://github.com/go-graphite/carbonapi/pulls?q=is%3Apr+author%3AFelixoid+merged%3A2020-06-13..2020-08-31
+- The latest biggest step to solve performance issues I've done in PR https://github.com/lomik/graphite-clickhouse/pull/88, it decreased the data transfered by network up to 500 times for the worst cases.
+- After it the maintainer, Roman Lomonosov, has gave the rights to merge any code into master branch. I used it to improve as much as possible, and added and fixed ~50 PRs and issues.
+- As well he gave me push rights to https://github.com/lomik/carbon-clickhouse
+- In October Vladimir Smirnov has created a group in Telegram, where I actively support users of graphite-web, carbonapi, graphite/carbon-clickhouse and help them to solve their issues.
+- I actively developed features to '*-clickhouse' projects.
+
+2021:
+- I've done a few refactorings of the graphite-clickhouse codebase before I left InnoGames. It was /render handler and configuration part
+- Developed a few personal projects.
+- Started mentoring of my first pupil.
