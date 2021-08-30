@@ -10,7 +10,7 @@ clean:
 	@rm -f *.aux *.log *.out
 
 help:
-	@echo 'Usage: make $$JOB_TITLE'
+	@echo 'Usage: make AUTHOR="$(AUTHOR)" $$JOB_TITLE'
 	@echo ' Will produce "$$JOB_TITLE - $(AUTHOR).pdf" file'
 
 # By some reason, vim autocommand executes `make "dvi"`
