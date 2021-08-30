@@ -50,3 +50,9 @@
 - After it the maintainer, Roman Lomonosov, has gave the rights to merge any code into master branch. I used it to improve as much as possible, and added and fixed ~50 PRs and issues.
 - As well he gave me push rights to https://github.com/lomik/carbon-clickhouse
 - In October Vladimir Smirnov has created a group in Telegram, where I actively support users of graphite-web, carbonapi, graphite/carbon-clickhouse and help them to solve their issues.
+- I actively developed features to '*-clickhouse' projects.
+
+2021:
+- I've done a few refactorings of the graphite-clickhouse codebase before I left InnoGames. It was /render handler and configuration part
+- Developed a few personal projects.
+- Started mentoring of my first pupil.
