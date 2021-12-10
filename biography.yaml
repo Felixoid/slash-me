@@ -1,9 +1,9 @@
 University:
-  - 2003-2010
+  - 2003-2010 Moscow Power Engineering Institute
   - Engineer of metal's technology
 
 Part-time job:
-  - Started my first carier related job as ADSL technician at 2006-2009
+  - Started my first carier related job as ADSL/Ethernet ISP technician at 2006-2009
   - Set up the internet for my future supervisor in RHMC
 
 RHMC:
@@ -19,4 +19,8 @@ Yandex:
   - The total experience in 4 years can be concluded as `was sufficient to get the job abroad with very bad English language`
 
 InnoGames:
-  - #TODO: add it later
+  - The first international experience
+  - Managed Jenkins' pipelines and designed them to be scalable and automated
+  - Migrated metrics system graphite-web from whisper to ClickHouseDB
+  - Contributed to OSS intensively
+  - Learned golang and became the main contributer, and then maintainer of graphite-clickhouse and carbon-clickhouse projects
