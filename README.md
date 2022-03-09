@@ -12,7 +12,7 @@ To build a CV, run `make 'position name'`
 ### Requirements
 
 #### Arch Linux
-`texlive-most`
+`texlive-fontsextra texlive-latexextra`
 
 #### Debian/Ubuntu
 `texlive-latex-extra texlive-luatex texlive-fonts-extra`
