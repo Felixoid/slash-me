@@ -10,4 +10,9 @@ Additionally, you can take a look into my [open-source](./opensource.yaml) histo
 To build a CV, run `make 'position name'`
 
 ### Requirements
-Install `texlive-most` on Arch Linux to get all necessary texlive packages.
+
+#### Arch Linux
+`texlive-most`
+
+#### Debian/Ubuntu
+`texlive-latex-extra texlive-luatex texlive-fonts-extra`
